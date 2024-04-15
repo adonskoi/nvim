@@ -37,18 +37,20 @@ return require('packer').startup(function(use)
 	  }
   }
   use {
-    "williamboman/mason.nvim"
-}
-use {
-    "williamboman/mason-lspconfig.nvim"
-}
-use({
-	"Pocco81/auto-save.nvim",
-	config = function()
-		 require("auto-save").setup {
-			-- your config goes here
-			-- or just leave it empty :)
-		 }
-	end,
-})
+      "williamboman/mason.nvim"
+  }
+  use {
+      "williamboman/mason-lspconfig.nvim"
+  }
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use({
+      "Pocco81/auto-save.nvim",
+      config = function()
+          require("auto-save").setup {
+              -- your config goes here
+              -- or just leave it empty :)
+          }
+      end,
+  })
 end)

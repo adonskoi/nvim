@@ -24,7 +24,9 @@ require('mason-lspconfig').setup({
   ensure_installed = {
 	"pylsp",
 	"tsserver",
+    "rust_analyzer",
     "lua_ls",
+    "gopls",
   },
   handlers = {
     lsp.default_setup,
@@ -38,7 +40,7 @@ require("lspconfig").pylsp.setup({
                     enabled = false,
                 },
                 pylint = {
-                    enabled = true,
+                    enabled = false,
                     maxLineLength = 120,
                 },
                 flake8 = {
