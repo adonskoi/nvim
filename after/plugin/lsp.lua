@@ -10,7 +10,7 @@ cmp.setup({
         ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
         ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }),
         ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true })  -- Auto-import or confirm completion
+        ['<CR>'] = cmp.mapping.confirm({ select = false })  -- Auto-import or confirm completion
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
