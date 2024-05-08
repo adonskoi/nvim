@@ -8,14 +8,12 @@ return require('packer').startup(function(use)
 	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
-  use ({
+
+  use { "catppuccin/nvim", as = "catppuccin" }
+ use ({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
   })
-
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate', highlights = {enable = true, disable = {'go'}}})
   use ('nvim-treesitter/playground')
   use ('theprimeagen/harpoon')
