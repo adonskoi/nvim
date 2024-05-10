@@ -4,7 +4,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "mocha",
     },
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
     term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
     dim_inactive = {
@@ -49,8 +49,8 @@ require("catppuccin").setup({
 
 require("rose-pine").setup({
     variant = "auto", -- auto, main, moon, or dawn
-    dark_variant = "dawn", -- main, moon, or dawn
-    dim_inactive_windows = false,
+    dark_variant = "moon", -- main, moon, or dawn
+    dim_inactive_windows = true,
     extend_background_behind_borders = true,
 
     enable = {
@@ -62,7 +62,7 @@ require("rose-pine").setup({
     styles = {
         bold = true,
         italic = true,
-        transparency = false,
+        transparency = true,
     },
 
     groups = {
@@ -115,4 +115,4 @@ require("rose-pine").setup({
 })
 
 --vim.cmd.colorscheme "catppuccin"
-vim.cmd.colorscheme "rose-pine"
+ vim.cmd.colorscheme "rose-pine"
