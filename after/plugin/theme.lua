@@ -113,6 +113,13 @@ require("rose-pine").setup({
         -- end
     end,
 })
+local notify = require("notify")
+notify.setup({
+  stages = "fade",
+  timeout = 1000,
+  background_colour = "#000000",
+})
+vim.notify = notify
 
 --vim.cmd.colorscheme "catppuccin"
  vim.cmd.colorscheme "rose-pine"

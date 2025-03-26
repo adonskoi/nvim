@@ -1,6 +1,6 @@
 require("adonskoi.remap")
 require("adonskoi.set")
-
+require("adonskoi.linters")
 
 -- don't know what the fuck is that
 -- this solve problem when I hit CR I'm went to some file. Don't know why
