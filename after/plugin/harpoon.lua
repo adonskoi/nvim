@@ -8,3 +8,7 @@ vim.keymap.set("n", "<C-t>", function() ui.nav_file(1) end)
 vim.keymap.set("n", "<C-h>", function() ui.nav_file(2) end)
 vim.keymap.set("n", "<C-n>", function() ui.nav_file(3) end)
 vim.keymap.set("n", "<C-m>", function() ui.nav_file(4) end)
+
+
+vim.keymap.set("n", "<leader>j", ui.nav_next, { desc = "Harpoon Next" })
+vim.keymap.set("n", "<leader>k", ui.nav_prev, { desc = "Harpoon Previous" })

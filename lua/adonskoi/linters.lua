@@ -103,6 +103,16 @@ vim.api.nvim_create_user_command("RuffFix", function()
 end, {})
 
 
+-- local null_ls = require("null-ls")
+-- null_ls.setup({
+--   sources = {
+--     null_ls.builtins.formatting.ruff,
+--     null_ls.builtins.diagnostics.ruff,
+--   },
+-- })
+--
+-- vim.keymap.set("n", "<leader>rf", function() vim.lsp.buf.format({ async = true }) end, { desc = "Format with Ruff" })
+
 vim.keymap.set("n", "<leader>rf", ":RuffFormat<CR>", { desc = "Ruff Format" })
 vim.keymap.set("n", "<leader>rr", ":RuffFix<CR>", { desc = "Ruff Check --fix" })
 

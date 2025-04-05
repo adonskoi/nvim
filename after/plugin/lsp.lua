@@ -81,7 +81,7 @@ require("lspconfig").pylsp.setup({
                 },
                 pylint = {
                     enabled = false,
-                    maxLineLength = 120,
+                    maxlinelength = 120,
                 },
                 flake8 = {
                     enabled = false,
@@ -93,13 +93,19 @@ require("lspconfig").pylsp.setup({
                     enabled = false,
                 },
                 jedi = {
-                    enabled = false,
+                    enabled = true,
                 },
                 mccabe = {
                     enabled = false,
                 },
+                -- mypy = {
+                --     enabled = false,
+                -- },
                 mypy = {
-                    enabled = false,
+                    enabled = true,
+                    live_mode = true,
+                    dmypy = true, -- use daemon mode for better performance
+                    report_progress = true,
                 },
                 isort = {
                     enabled = false,
