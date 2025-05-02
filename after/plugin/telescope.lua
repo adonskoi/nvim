@@ -7,3 +7,14 @@ vim.keymap.set('n', '<leader>fg', function()
 		search = vim.fn.input('Grep String > ')
 	})
 end)
+
+
+
+vim.keymap.set('n', '<leader>ci', function()
+    local word = vim.fn.expand("<cword>")
+    builtin.grep_string({
+        search = 'class .*' .. word,
+        use_regex = true,
+    })
+end, { desc = 'Grep for implementation of class under cursor' })
+
